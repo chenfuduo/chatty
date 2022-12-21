@@ -1,0 +1,60 @@
+<!-- Author: Boby Wang -->
+<!-- Description: This page is building a web page that idding user's all infomation. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>register</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1></h1>
+	<div id = "allInfo" style = "width: 350px; background-color:#e3dfc8; margin-left:auto; margin-right:auto; padding: 20px;">
+		<img id = "portrait" src = "/img/questionMark.png" onclick="addPortrait()" style = "float: right; border-radius: 50%; cursor:pointer; width: 100px; margin-top:10px; margin-right:10px;" alt="portrait">
+		<form action = "/uploadRegisterPortrait" method="post" enctype="multipart/form-data" style = "float:right; ">	
+			<input type = "file" id="FileUpload1" accept = "image/*" name = "portrait" onchange = "loadFile(event)" style="display: none;" />
+			<input type = "submit" id="FileUpload2" value = "upload portrait" style = "width:100px;display: none;" >
+		</form>
+		<div class="info">
+			<label for="username" class="lb">Username:</label>
+			<input type="text" name="username" id="username" style = "width:100px;"/>
+		</div>
+		
+		
+		<div class="info">
+			<label for="password" class="lb">Password:</label>
+			<input type="password" name="password" id="password" style = "width:100px;"/>
+		</div>
+		                
+		<!--  <div class="info">
+			<label for="gender" class="lb">Gender:</label>
+			<input type="text" name="gender" id="gender"/>
+		</div> -->
+		<label for="gender" class="lb">Gender:</label>
+		<select class="info" id = "gender">
+			<option value="not preferred">Not preferred</option>
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+		</select>
+	
+		<div class="info">
+	 		<label for="age" class="lb">Age:</label>
+			<input type="number" name="age" id="age" style = "width:100px;"/>
+		</div>
+	
+		<div class="info">
+			<label for="hobby" class="lb">Hobbies:</label>
+			<input type="text" name="hobby" id="hobby" style = "width:100px;"/>
+		</div>
+	
+		<div class="info">
+			<label for="intro" class="lb">Introduction:</label>
+			<textarea name="intro" id="intro" style="width:290px; background-color: #ebecf1;"></textarea>
+			<button type="button" onclick="location.href='index.html'" style="margin-left:200px;margin-bottom: 20px;">Back</button>
+			<button onclick = "register();" style = "margin-left:0px;margin-bottom: 20px;">Finish</button>
+		</div>
+			
+	</div>
+	<script src = "start.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/**
+Fuduo Chen
+CSC 337 Final Project
+
+This is style sheet of index.html
+*/
+#history{
+	width: 100%;
+	height: 70%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: lightgrey;
+	overflow-y: auto;
+}
+
+#history::-webkit-scrollbar {
+  display: none;
+}
+
+#input{
+	width: 100%;
+	background-color: #204051;
+	display: block;
+	position: absolute;
+	top: 70%;
+	left: 0;
+	padding-bottom: 20px;
+}
+
+#inputSection{
+	padding: 20px
+}
+
+#inputFieldA{
+	padding-bottom: 10px;
+	display: block;
+}
+
+#send{
+	margin-left: 260px;
+}
+#text{
+	/* float: right; */
+}
+
+#emoji{
+	background-color: white;
+	overflow-y: auto;
+	max-height: 100px;
+	position: absolute;
+	top: -100px;
+}
+
+#emoji::-webkit-scrollbar {
+  display: none;
+}
+
+#name{
+	display: inline;
+}
+
+#innerFileSection{
+	background-color: white;
+	overflow-y: auto;
+	max-height: 100px;
+	position: absolute;
+	top: 0px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+
+label {
+	width: 100px;
+	line-height: 30px;
+	display: inline-block;
+	text-align: left;
+}
+/* info.html */
+.infoDetails{
+	width: 100px;
+	line-height: 30px;
+	display: inline-block;
+	text-align: left;
+}
+
+#intro{
+	width: 252px;
+	padding: 4px;
+	height: 100px;
+	background-color: #f0ece3; 
+	overflow-y: auto;
+	margin: 20px;
+}
+
+#allinfo{
+	width: 350px;
+	background-color: #c7b198;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#introSection{
+	width: 300px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.themeButton {
+
+        background-color: rgb(158, 167, 176);
+        color: white;
+        padding: 7px;
+        margin-right: 15px;
+}
+
+#mode {
+        bottom: 50px;
+        right: 130px;
+        margin-left: 360px;
+        cursor: pointer;
+}
+
+#themeB {
+        bottom: 50px;
+        right: 65px;
+}

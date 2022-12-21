@@ -1,0 +1,42 @@
+<!-- Fuduo Chen -->
+<!-- Final Project -->
+<!--  CSC  337  -->
+<!-- This is a chatty project. Users can chat in this chat room. -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chatty</title>
+<link id = "cssFile" rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id = "history"></div>
+<div id = "input">
+
+	<div id = "inputSection">
+		<div id = "inputFieldA">
+			<div id = "name" onclick = "location.href = 'info.html'" style = "cursor: pointer;color:white;"></div>
+			<span onclick = "displayEmoji()" style = "cursor:pointer;"> 😀 </span>
+			<input type = "button" id="scroll" onclick="switchScrollTyple()" value = "stop auto scroll" style = "">
+			<div id = "chatNums" style = "display: none;">0</div>
+			<button onclick = "shareFile()"> share files </button>
+			<form action = "/upload" method="post" enctype="multipart/form-data" style = "display:inline;">
+				<input type="submit" value="upload"/>
+				<input type="file" name = "file" style = "width: 200px;color:white;" multiple/>
+			</form>
+			<div id = "emoji"></div>
+			<div id = "file"></div>
+		</div>
+		<div id = "inputFieldB">
+			<textarea id = "text" rows = "5" cols = "50"></textarea>
+			
+		</div>
+		<button type = "button" id = "logout" onclick = "logOut()">log out</button>
+		<button type = "button" id = "send" title="Shift+Enter to insert a new line" onclick = "updateText()">send message</button>
+	</div>
+	<a class="themeButton" id="mode" onclick="addStyleSheet('night.css')">Night Mode</a>
+</div>
+
+<script src = "clientMain.js"></script>
+</body>
+</html>

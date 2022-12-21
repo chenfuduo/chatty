@@ -1,0 +1,38 @@
+<!-- Author: Boby Wang -->
+<!-- Author: Fuduo Chen -->
+<!-- Description: This page is building a web page that shows user's all infomation. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>personal information</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id='allinfo'>
+		<div id = "followingList"></div>
+		<div id = "introSection">
+			<img src = "/img/questionMark.png" id = "portrait" onclick="addPortrait()" style = "border-radius: 50%; float:right; width: 100px;" alt="portrait"/>
+			<div><span class = "infoDetails">username:		</span>	<span id = "username">	g</span></div>
+			<div><span class = "infoDetails">Gender:		</span>	<span id = "gender">	g</span></div>
+			<div><span class = "infoDetails">Age:			</span>	<span id = "age">		a</span></div>
+			<div><span class = "infoDetails">Hobby:		</span>	<span id = "hobby">		h</span></div>
+			<div><span class = "infoDetails" onclick = "checkFollowing()">following:		</span>	<span id = "following">		h</span></div>
+			<div><span class = "infoDetails">follower:		</span>	<span id = "follower">		h</span></div>
+			<form action = "/uploadSelfPortrait" id="FileUpload" method="post" enctype="multipart/form-data" style = "float:right; ">	
+				<input type = "file" id="FileUpload1" accept = "image/*" name = "portrait" onchange = "loadFile(event)" style="display: none;" />
+				<input type = "submit" id="FileUpload2" value = "upload portrait" style = "width:100px;display: none;" >
+			</form>
+			<span class = "infoDetails">Introduction:	</span>	
+			<div id = "introOut">
+				<div id = "intro">	i</div>
+				<!-- <button onclick = "unfollow()" >Unfollow</button> -->
+				<input type="button" id = "followButton" onclick = "follow()" value="Follow" style = "margin-left:230px;">
+			</div>
+		</div>
+	</div>
+	
+	
+	<script src = "personal.js"></script>
+	</body>
+</html>
